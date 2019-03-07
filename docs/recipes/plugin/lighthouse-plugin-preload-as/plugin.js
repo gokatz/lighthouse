@@ -18,8 +18,7 @@ module.exports = {
     description: 'Results for our new plugin category.',
     auditRefs: [
       {id: 'preload-as-audit', weight: 1},
-      {id: 'is-on-https', weight: 1}, // Can also reference audits in the default config.
-      {id: 'meta-description', weight: 1},
+      {id: 'meta-description', weight: 1}, // Can also reference default Lighthouse audits.
     ],
   },
 };
