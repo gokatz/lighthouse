@@ -2,6 +2,6 @@
   "name": "plugin-lighthouse-recipe",
   "private": true,
   "dependencies": {
-    "lighthouse": "^4.3.0"
+    "lighthouse": "^4.2.0"
   }
 }
