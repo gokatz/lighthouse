@@ -82,7 +82,9 @@ class CategoryRenderer {
     const titleEl = this.dom.find('.lh-audit__title', auditEl);
     titleEl.appendChild(this.dom.convertMarkdownCodeSnippets(audit.result.title));
     this.dom.find('.lh-audit__description', auditEl)
-        .appendChild(this.dom.convertMarkdownLinkSnippets(audit.result.description));
+        .appendChild(this.dom.convertMarkdownLinkSnippets(audit.result.description, {
+          rating: Util.calculateRating(audit.result.score, scoreDisplayMode),
+        }));
 
     const header = /** @type {HTMLDetailsElement} */ (this.dom.find('details', auditEl));
     if (audit.result.details) {

@@ -61,6 +61,9 @@ describe('CategoryRenderer', () => {
     assert.ok(auditDOM.classList.contains('lh-audit--fail'));
     assert.ok(
       auditDOM.classList.contains(`lh-audit--${auditRef.result.scoreDisplayMode.toLowerCase()}`));
+
+    assert.ok(description.innerHTML.includes('&amp;utm_content=fail'),
+      'audit link has utm param indicating the audit\'s rating');
   });
 
   it('renders an audit explanation when appropriate', () => {
