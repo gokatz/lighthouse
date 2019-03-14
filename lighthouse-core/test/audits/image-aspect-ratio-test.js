@@ -37,7 +37,7 @@ describe('Images: aspect-ratio audit', () => {
         assert.ok(!result.warnings || result.warnings.length === 0, 'should not have warnings');
       }
     });
-  };
+  }
 
   testImage('is a css image', {
     rawValue: true,
